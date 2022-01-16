@@ -1,3 +1,6 @@
+# GitHub Link
+https://github.com/frkangul/nd0821-c2-build-model-workflow-starter
+
 # W&B Project Link
 https://wandb.ai/frkangul/nyc_airbnb?workspace=user-frkangul
 
