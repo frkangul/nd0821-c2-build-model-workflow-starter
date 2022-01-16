@@ -23,8 +23,10 @@ def go(args):
     logger.info("Data cleaning is started: ")
     df = pd.read_csv(artifact_local_path)
     # Drop outliers
-    idx = df['price'].between(args.min_price, args.max_price)
+    idx = df['price'].between(args.min_price, args.max_price) & df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
     df = df[idx].copy()
+
+
     df.to_csv("clean_sample.csv", index=False)
     artifact = wandb.Artifact(
         args.output_artifact,
